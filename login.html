@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/style.css">
+    <style>
+        .welcome img {
+            height: 35rem;
+        }
+
+        .online_pic {
+            height: 25rem;
+        }
+
+        .rev {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .contact_us {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            border-radius: 15px;
+            background: rgba(244, 168, 48, 0.3);
+            filter: opacity(5px);
+            padding: 30px 25px;
+            height: 35rem;
+
+        }
+
+        .contact_us h1 {
+            margin: 15px;
+
+        }
+
+
+        .contact_us input,
+        textarea {
+            margin: 8px;
+            width: 25rem;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            height: 1.5rem;
+            border-bottom: solid 1px #e54466;
+        }
+
+        .contact_us textarea {
+            height: 3rem;
+        }
+
+        .contact_us span {
+            margin: 10px;
+        }
+
+        .contact_us button {
+            margin: 10px;
+            width: 25rem;
+            padding: 10px 20px;
+            font-size: large;
+
+        }
+
+        .contact_us span {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sign_log {
+            height: 80vh;
+        }
+
+        @media screen and (max-width:800px) {
+            .sign_log {
+                height: auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                alt="Logo Image"> -->
+                <h1 class="com-name"><a href="index.html" class="com-name">Etailors</a></h1>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="flex welcome rev sign_log">
+        <span class="flex welcomeinfo ">
+            <form action="" method="post" class="flex contact_us">
+                <h1 style="text-align: center; width: 100%;">Welcome Back!</h1>
+                <span class="flex">
+                    <label for="email">Email</label>
+                    <input type="email" id="" name="email">
+
+
+                </span>
+                <span class="flex message">
+                    <label for="text">Password</label>
+                    <input type="password" id="" name="password">
+
+                </span>
+
+                <span>
+                    <button type="submit">Submit</button>
+                </span>
+            </form>
+        </span>
+        <div>
+            <img src="images/ides.png" alt="" class="contact_img online_pic">
+            <small style="display: block;text-align: center;">Welcome back</small>
+        </div>
+    </div>
+
+    <footer class="flex">
+        <div class="location flex">
+
+            <iframe class="maps" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=auto25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                width="auto" height="300" frameborder="0"><a href="https://www.gps.ie/truck-gps/">delivery trucks
+                    gps</a></iframe>
+            <span class="location_info flex">
+                <h3 class="footer_head" style="margin: 15px 0;">Location</h3>
+
+
+                <h3>Some where in india</h3>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+
+
+            </span>
+        </div>
+
+        <span class="footer_info flex">
+
+            <div>
+                <h3 class="footer_head">Shop by</h3>
+                <ul>
+                    <li>
+                        <a href="#">Men</a>
+                    </li>
+                    <li>
+                        <a href="#">Women</a>
+                    </li>
+                    <li>
+                        <a href="#">Kids</a>
+                    </li>
+                    <li>
+                        <a href="#">Indie</a>
+                    </li>
+                    <li>
+                        <a href="#">Stores</a>
+                    </li>
+                    <li>
+                        <a href="#">New arrivals</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer_head">Follow us</h3>
+
+                <ul>
+                    <li>
+                        <a href="#">Frequenly asked Questions</a>
+                    </li>
+                    <li>
+                        <a href="#">Returns</a>
+                    </li>
+                    <li>
+                        <a href="#">Cancellations</a>
+                    </li>
+                    <li>
+                        <a href="#">Payments</a>
+                    </li>
+                    <li>
+                        <a href="#">Customer care</a>
+                    </li>
+                    <li>
+                        <a href="#">How Do I Redeem My Coupon</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer_head">Follow us</h3>
+                <ul>
+                    <li>
+                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+        hamburger.addEventListener('click', () => {
+            //Animate Links
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+            //Hamburger Animation
+            hamburger.classList.toggle("toggle");
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/506b713f8c.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
