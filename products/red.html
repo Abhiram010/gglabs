@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 15px 0;
+        }
+
+        .product_grid {
+            display: flex;
+            justify-content: space-between;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .product_img {
+            flex-basis: 20%;
+            margin: 15px;
+        }
+
+        .product_desc {
+            flex-basis: 80%;
+            overflow-y: scroll;
+            margin: 0 5rem;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            padding: 15px;
+            overflow-x: hidden;
+
+        }
+
+        .buttons_group {
+            padding: 10px;
+        }
+
+        .buttons_group button {
+            width: 100%;
+            padding: 15px;
+            font-size: larger;
+            margin: 5px 0 5px 0;
+        }
+
+        .prod_buts button {
+            margin: 8px;
+            padding: 8px 10px;
+            cursor: pointer;
+        }
+
+
+        .prod_page_img {
+            height: 25rem;
+        }
+
+        .featured_products {
+            gap: 0;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(auto, 1fr);
+        }
+
+        .cross {
+            text-decoration: line-through;
+            color: #e54466;
+        }
+
+        .discount {
+            color: #32ac73;
+        }
+
+        .card_info {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .colors {
+            margin: 15px;
+        }
+
+        .rate_stars {
+            color: gold;
+            font-size: 2.5rem;
+        }
+
+        .user_stars {
+            color: gold;
+            font-size: 1rem;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .featured_products {
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .card_info p {
+                width: 25rem;
+
+                text-align: center;
+            }
+
+            .card {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-basis: 100%;
+            }
+
+            .product_desc {
+                flex-basis: 100%;
+            }
+
+            body {
+                overflow: auto;
+                overflow-x: hidden;
+            }
+
+            .product_grid {
+                height: auto;
+                width: auto;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .product_img {
+                flex-basis: 100%;
+                margin: 15px;
+            }
+
+            .product_desc {
+                flex-basis: 100%;
+                width: 98vw;
+                overflow-x: hidden;
+            }
+
+            p {
+                width: 98vw;
+            }
+
+            .arrivals {
+                width: 98vw;
+            }
+
+        }
+
+        .arrivals {
+            border: none;
+        }
+
+        .user_prof img {
+            height: 4rem;
+            border-radius: 50%;
+        }
+
+        .user_prof {
+            flex-wrap: nowrap;
+        }
+
+        .user_rate {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            max-width: 25rem;
+            border: solid 1px rgb(59, 59, 59);
+            padding: 25px;
+            margin: 25px 10px;
+            flex-wrap: nowrap;
+            width: 80rem;
+
+        }
+
+        .name_rating {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        .arrivals {
+            overflow-x: scroll;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                alt="Logo Image"> -->
+                <h1 class="com-name">Etailors</h1>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#Speakers">Products</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="product_grid">
+        <div class="product_img">
+            <img src="../images/red_tshrit.jpg" alt="">
+            <div class="flex buttons_group">
+                <button><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                <button> <i class="fa fa-money" aria-hidden="true"></i> Buy now</button>
+
+            </div>
+        </div>
+        <div class="product_desc">
+            <h1>Red Jacket</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate dolorem dolores quo voluptates
+                ex voluptate at, possimus exercitationem totam sint debitis a fugiat corrupti consequatur aliquid
+                pariatur voluptatibus repudiandae doloribus tenetur quisquam. Et ipsam deserunt, soluta consequatur nisi
+                doloribus dolorum fuga blanditiis repellendus architecto enim vitae molestias, dolorem itaque? Soluta
+                aliquam repudiandae excepturi facere odio id! Repellat neque enim at in eos quod mollitia reiciendis
+                eaque deserunt! Architecto blanditiis ratione eaque et hic fuga praesentium sit illum, necessitatibus
+                corrupti id voluptatem libero at, fugiat rem ipsum ducimus? Facilis vitae officia at numquam corrupti
+                temporibus nostrum deserunt delectus tenetur repellat.</p>
+            <span class="colors">
+
+
+                <div>Colors:</div>
+                <div class="flex ">
+                    <div style="height: 3rem;width: 3rem; background-color: #fa5959; border-radius: 50%; margin: 5px; ">
+                    </div>
+                    <div style="height: 3rem;width: 3rem; background-color: #333333; border-radius: 50%;margin: 5px;">
+                    </div>
+                </div>
+            </span>
+            <h1>About Red Company!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi cupiditate dolorem dolores quo voluptates
+                ex voluptate at, possimus exercitationem totam sint debitis a fugiat corrupti consequatur aliquid
+                pariatur voluptatibus repudiandae doloribus tenetur quisquam. Et ipsam deserunt, soluta consequatur nisi
+                doloribus dolorum fuga blanditiis repellendus architecto enim vitae molestias, dolorem itaque? Soluta
+                aliquam repudiandae excepturi facere odio id! Repellat neque enim at in eos quod mollitia reiciendis
+                eaque deserunt! Architecto blanditiis ratione eaque et hic fuga praesentium sit illum, necessitatibus
+                corrupti id voluptatem libero at, fugiat rem ipsum ducimus? Facilis vitae officia at numquam corrupti
+                temporibus nostrum deserunt delectus tenetur repellat.</p>
+            <div>
+                <div class="ratings">
+                    <h1>Ratings</h1>
+                    <div class="rate_stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+                <h1>Reviews</h1>
+                <div class="flex arrivals">
+
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                    <div class="user_rate flex">
+                        <div class="user_prof flex">
+                            <img src="../images/profile.jpg" alt="">
+                            <span class="name_rating">
+                                <h2>Abhiram</h2>
+                            </span>
+                        </div>
+                        <div class="user_stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </div>
+                        <h5 style="margin:10px">Wonderful Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat optio voluptas
+                            facere aliquid, dolores quibusdam dolor natus adipisci ab provident.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div>
+
+
+                <h2>Shop Similar items</h2>
+                <div class="featured_products">
+                    <div class="card flex">
+                        <img src="../images/blue.webp" alt="" class="imgs_new prod_page_img">
+                        <span class="card_info flex">
+                            <h3>Jacket</h3>
+                            <p>Nice looking Product</p>
+                            <h3 class="price">
+                                Offer Price: 325 <span class="cross">858</span> <span class="discount">33%</span>
+                            </h3>
+                            <div class="flex buttons_group">
+                                <button><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                                <button> <i class="fa fa-money" aria-hidden="true"></i> Buy now</button>
+
+                            </div>
+
+                        </span>
+                    </div>
+                    <div class="card flex" style="justify-content: center;">
+                        <img src="../images/cement.webp" alt="" class="imgs_new prod_page_img">
+                        <span class="card_info">
+                            <h3>Jacket</h3>
+                            <span class="card_info flex">
+                                <p>Nice looking Product</p>
+                                <h3 class="price">
+                                    Offer Price: 325 <span class="cross">858</span> <span class="discount">33%</span>
+                                </h3>
+                                <div class="flex buttons_group">
+                                    <button><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                                    <button> <i class="fa fa-money" aria-hidden="true"></i> Buy now</button>
+
+                                </div>
+
+                            </span>
+                        </span>
+                    </div>
+                    <div class="card flex">
+                        <img src="../images/fila.jpg" alt="" class="imgs_new prod_page_img">
+                        <span class="card_info">
+                            <h3>Jacket</h3>
+                            <span class="card_info flex">
+                                <p>Nice looking Product</p>
+                                <h3 class="price">
+                                    Offer Price: 325 <span class="cross">858</span> <span class="discount">33%</span>
+                                </h3>
+                                <div class="flex buttons_group">
+                                    <button><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                                    <button> <i class="fa fa-money" aria-hidden="true"></i> Buy now</button>
+
+                                </div>
+
+                            </span>
+                        </span>
+                    </div>
+                    <div class="card flex">
+                        <img src="../images/green.webp" alt="" class="imgs_new prod_page_img">
+                        <span class="card_info">
+                            <h3>Jacket</h3>
+                            <span class="card_info flex">
+                                <p>Nice looking Product</p>
+                                <h3 class="price">
+                                    Offer Price: 325 <span class="cross">858</span> <span class="discount">33%</span>
+                                </h3>
+                                <div class="flex buttons_group">
+                                    <button><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                                    <button> <i class="fa fa-money" aria-hidden="true"></i> Buy now</button>
+
+                                </div>
+
+                            </span>
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div>
+    </div>
+    </div>
+
+    </div>
+
+
+    <footer class="flex">
+        <div class="location flex">
+
+            <iframe class="maps" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=auto25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                width="auto" height="300" frameborder="0"><a href="https://www.gps.ie/truck-gps/">delivery trucks
+                    gps</a></iframe>
+            <span class="location_info flex">
+                <h3 class="footer_head" style="margin: 15px 0;">Location</h3>
+
+
+                <h3>Some where in india</h3>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+                <p style="display:inline;">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit Lorem ipsum
+                    dolor sit amet consectetur <br> adipisicing elit. Deleniti, odio!
+                    Commodi,
+                    dolor.</p>
+
+
+            </span>
+        </div>
+
+        <span class="footer_info flex">
+
+            <div>
+                <h3 class="footer_head">Shop by</h3>
+                <ul>
+                    <li>
+                        <a href="#">Men</a>
+                    </li>
+                    <li>
+                        <a href="#">Women</a>
+                    </li>
+                    <li>
+                        <a href="#">Kids</a>
+                    </li>
+                    <li>
+                        <a href="#">Indie</a>
+                    </li>
+                    <li>
+                        <a href="#">Stores</a>
+                    </li>
+                    <li>
+                        <a href="#">New arrivals</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer_head">Follow us</h3>
+
+                <ul>
+                    <li>
+                        <a href="#">Frequenly asked Questions</a>
+                    </li>
+                    <li>
+                        <a href="#">Returns</a>
+                    </li>
+                    <li>
+                        <a href="#">Cancellations</a>
+                    </li>
+                    <li>
+                        <a href="#">Payments</a>
+                    </li>
+                    <li>
+                        <a href="#">Customer care</a>
+                    </li>
+                    <li>
+                        <a href="#">How Do I Redeem My Coupon</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer_head">Follow us</h3>
+                <ul>
+                    <li>
+                        <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+        hamburger.addEventListener('click', () => {
+            //Animate Links
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+            //Hamburger Animation
+            hamburger.classList.toggle("toggle");
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/506b713f8c.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
